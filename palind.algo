@@ -1,0 +1,17 @@
+FUNCTION palindrom(chaine:STRING) : BOOLEAN;
+VAR
+    results :=BOOLEAN;
+    sChaine :=STRING;
+BEGIN
+    IF (chaine.lenth <=1) THEN 
+        results := TRUE;
+        ELSE
+        IF (chaine[0] = chaine[chaine.length-1]) THEN
+            sChaine := Sous_chaine(chaine, 2, chaine.length-2); 
+            palindrome(sChaine);
+            ELSE
+            results:= FALSE
+        END_IF
+    END_IF
+    RETURN results ;
+END
